@@ -15,6 +15,7 @@ const jwtSignUser = (user: User) => {
 export const login = async (req: Request, res: Response): Promise<any> => {
 	const { username, password }: User = req.body
 	try {
+		console.log(req.body)
 		const user = await UserModel.findOne({ username })
 		if (!user)
 			return res
