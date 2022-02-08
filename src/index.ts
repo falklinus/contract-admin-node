@@ -1,9 +1,8 @@
 import express, { Application, Request, Response } from 'express'
-import path from 'path'
 import config from './config'
 import cors from 'cors'
 import { contractRouter, eventRouter, userRouter } from './routers'
-import { connectToDb } from './db'
+import { connectToDb, UserModel } from './db'
 import { isAuthenticated } from './middlewares'
 
 connectToDb()
